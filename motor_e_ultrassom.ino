@@ -33,11 +33,10 @@ void loop(){
   
   if(distance<30){
     digitalWrite(in1, LOW);
-    digitalWrite(in2, HIGH);
-      analogWrite(enA, 150);
-    digitalWrite(in3, HIGH);
+    digitalWrite(in2, LOW);
+    digitalWrite(in3, LOW);
     digitalWrite(in4, LOW);
-      analogWrite(enB, 150);
+  
   }
   else{
   digitalWrite(in1, LOW);
@@ -45,6 +44,7 @@ void loop(){
   analogWrite(enA, 150);
   digitalWrite(in3, HIGH);
   digitalWrite(in4, LOW);
+  analogWrite(enB, 150);
   }
    Serial.println(distance); 
 }
